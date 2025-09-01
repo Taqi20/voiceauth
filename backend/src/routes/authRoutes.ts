@@ -1,7 +1,9 @@
 import express from 'express';
-import { upload } from '../config/multerConfig';
-import { register, login, getMe, enroll, verify } from '../controllers/authController';
-import { isAuthenticated, AuthRequest } from '../middleware/authMiddleware';
+import { upload } from '../config/multerConfig.js';
+import { register, login, getMe, enroll, verify } from '../controllers/authController.js';
+import { isAuthenticated } from '../middleware/authMiddleware.js';
+
+import type { AuthRequest } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 

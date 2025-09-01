@@ -1,8 +1,8 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { AuthRequest } from '../middleware/authMiddleware';
+import type { AuthRequest } from '../middleware/authMiddleware.js';
 import { createVoiceprint, compareVoice } from '../services/mockBiometricService.js';
 
 const prisma = new PrismaClient();
